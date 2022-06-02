@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +16,23 @@
 	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 	<script type ='text/babel'> 
 		function Header(){
-			return <h1> How to say </h1>
+			return (<div><h1> How to say </h1></div>)
 		}
-		ReactDOM.render(<Header />, document.getElementById('root'))
+		function Description(){
+			return (<h2> Ici on dira des chose dans differentes langues</h2>)
+		}
+
+		function Banner(){
+
+			return (<div>
+					<Header />
+					<Description />
+
+					</div>)
+		}
+	ReactDOM.render(<Banner />, document.getElementById('root'))
+	
 	</script>
 </body>
 
-</html>“
+</html>
